@@ -28,3 +28,7 @@ const poly = new Account({
 });
 
 poly.getInfo(); // Login: Poly, Email: poly@mail.com
+
+
+
+
