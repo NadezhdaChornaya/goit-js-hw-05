@@ -10,16 +10,25 @@
 // текущих
 
 class Storage {
-    constructor() {
-
+    constructor(items) {
+        this.items = items;
     }
-    getItems() {
-        return items;
+    getItems(items) {
+        return this.items;
     }
     addItem(item) {
+        this.items.push(item);
+        return this.items;
+    }
+    removeItem(item) {
+        let index = this.items.indexOf(item)
+        // console.log(index);
+        if (index !== -1) {
+            this.items.splice(index, 1)
+        }
+        return this.items;
 
     }
-    removeItem(item) { }
 }
 
 const storage = new Storage([
