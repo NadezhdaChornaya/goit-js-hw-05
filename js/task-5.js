@@ -2,7 +2,7 @@
 class Car {
     constructor({ speed = 0, price, maxSpeed, isOn = false, distance = 0 }) {
         this.speed = speed;
-        this._price = price;
+        this.price = price;
         this.maxSpeed = maxSpeed;
         this.isOn = isOn;
         this.distance = distance;
@@ -31,11 +31,11 @@ class Car {
      * Добавь геттер и сеттер для свойства price,
      * который будет работать с свойством цены автомобиля.
      */
-    get price() {
-        return this._price
+    get newPrice() {
+        return this.price
     }
-    set price(value) {
-        this._price = value;
+    set newPrice(value) {
+        this.price = value;
     }
 
     /*

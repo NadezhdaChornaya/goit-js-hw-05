@@ -14,22 +14,22 @@
 
 class StringBuilder {
     constructor(value) {
-        this._value = value;
+        this.value = value;
     }
-    get value() {
-        return this._value;
+    get newValue() {
+        return this.value;
     }
     append(str) {
-        this._value = `${this._value}${str}`
-        return this._value
+        this.value = `${this.value}${str}`
+        return this.value
     }
     prepend(str) {
-        this._value = `${str}${this._value}`
-        return this._value
+        this.value = `${str}${this.value}`
+        return this.value
     }
     pad(str) {
-        this._value = `${str}${this._value}${str}`
-        return this._value
+        this.value = `${str}${this.value}${str}`
+        return this.value
     }
 }
 
