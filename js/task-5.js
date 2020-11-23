@@ -67,12 +67,14 @@ class Car {
      */
     accelerate(value) {
         if (this.speed + value < this.maxSpeed) {
-            this.speed = this.speed + value;
+            this.speed += value;
         } else {
             this.speed = this.maxSpeed
         }
         return this.speed
     }
+
+
 
     /*
      * Отнимает от свойства speed полученное значение,
@@ -80,12 +82,14 @@ class Car {
      */
     decelerate(value) {
         if (this.speed - value > 0) {
-            this.speed = this.speed - value;
+            this.speed -= value;
         } else {
-            this.speed = this.maxSpeed
+            this.speed = 0;
         }
         return this.speed
     }
+
+
 
     /*
      * Добавляет в поле distance киллометраж (hours * speed),
