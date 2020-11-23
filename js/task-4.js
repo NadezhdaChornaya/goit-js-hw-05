@@ -14,22 +14,22 @@
 
 class StringBuilder {
     constructor(value) {
-        this.value = value;
+        this._value = value;
     }
-    get newValue() {
-        return this.value;
+    get value() {
+        return this._value;
     }
     append(str) {
-        this.value = `${this.value}${str}`
-        return this.value
+        this._value = `${this._value}${str}`
+        return this._value
     }
     prepend(str) {
-        this.value = `${str}${this.value}`
-        return this.value
+        this._value = `${str}${this._value}`
+        return this._value
     }
     pad(str) {
-        this.value = `${str}${this.value}${str}`
-        return this.value
+        this._value = `${str}${this._value}${str}`
+        return this._value
     }
 }
 
@@ -42,5 +42,5 @@ console.log(builder.value); // '.^'
 builder.prepend('^');
 console.log(builder.value); // '^.^'
 
-// builder.pad('=');
-// console.log(builder.value); // '=^.^='
+builder.pad('=');
+console.log(builder.value); // '=^.^=' 
